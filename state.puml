@@ -1,0 +1,14 @@
+@startuml
+
+Sightseer :
+Buyer :
+Holder :
+
+[*] --> Sightseer : init status
+Sightseer --> Buyer: openAccount
+Buyer --> Holder : buy
+Holder --> Holder : partial sell
+Holder --> Buyer : sell all
+Buyer --> Sightseer : writeOff
+
+@enduml

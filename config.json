@@ -1,0 +1,25 @@
+{
+  "name": "stock_state_machine",
+  "init_state": "sightseer",
+  "event": [{
+    "name": "openAccount",
+    "src": ["sightseer"],
+    "dst": "buyer"
+  },{
+    "name": "buy",
+    "src": ["buyer"],
+    "dst": "holder"
+  },{
+    "name": "sellPartial",
+    "src": ["holder"],
+    "dst": "holder"
+  },{
+    "name": "sellAll",
+    "src": ["holder"],
+    "dst": "buyer"
+  },{
+    "name": "writeOff",
+    "src": ["buyer"],
+    "dst": "sightseer"
+  }]
+}
